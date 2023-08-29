@@ -1,0 +1,201 @@
+/* variable de colores principales para la pagina */
+:root{
+    --blanco: #fff;
+    --negro: #150E25;
+    --viola: #CC92C4;
+    --purple: #603EAB;
+    --hblue: #56A7AB;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Hack para box model*/
+    scroll-snap-type:y mandatory;
+
+}
+/*Este tambien es parte del hack para el box model*/
+*, *:before,*:after{
+    box-sizing: inherit;
+}
+/*Este estilo de fuente se saco de google fonts, se llama Krub 400 y 700, por si quieres usarlo despues*/
+
+body{
+    font-family: 'Krub', sans-serif;
+    font-size: 16px; /*cada rem = 10px*/
+
+    /*esto sirve para hacer degradados hacia arriva empieza con el color ese, hasta el color blanco*/
+    /* background-image: linear-gradient(to top, #F7EBE6, var(--blanco)100%); */
+}
+
+
+.boton{
+    align-items: center;
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--negro);
+    padding: 1.5rem ;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    display: inline-block;
+}
+
+
+.header{
+    width: 100%;
+    height: 60rem;
+    background-image: url(../img/Cyberpunk2077.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center center;
+
+}
+.header__navegacion{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    justify-content: right;
+}
+.navegacion{
+    text-decoration: none;
+    border: none;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+    
+}
+.bg--hero{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0,.7);
+
+}
+.header__hero{
+    height: 85%;
+}
+
+.header__hero--inicio{
+    text-align: center;
+    background-color: rgba(96, 62, 234, 0.7);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 4rem;
+    color: white;
+}
+@media (min-width: 768px){
+    .header__hero--inicio{
+        width: 40%;
+    }
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__fotos, .main__opciones{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+.main__fotos{
+    height: 90rem;
+}
+.main__datos{
+    margin: 0;
+    background-color: #D3D3D3;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caja, .carta{
+    width: 90%;
+    height: 20%;
+    text-align: center;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+.icon{
+}
+.carta{
+    width: 70%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 1rem;
+    background-color: var(--blanco);
+}
+.bg-icon{
+    background-color: var(--viola);
+    padding: 1rem;
+    border-radius: 50%;
+
+}
+ 
+li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+.opcion{
+    width: 80%;
+    margin-bottom: 1rem;
+    
+}
+.marco{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    color: var(--blanco);
+    background-color: var(--purple);
+}
+.listas{
+    background-color: #D3D3D3;
+    padding: 2rem;
+    text-align: center;
+}
+.inter{
+    background-color: var(--negro);
+}
+h1{
+    text-align: center;
+    display: block;
+}
+@media (min-width: 768px){
+    .main__fotos, .main__datos, .main__opciones{
+        height: 40rem;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    .main__datos, .main__opciones{
+        justify-content: space-evenly;
+        
+    }
+    .main__opciones{
+        justify-content: space-around;
+    }
+    .caja, .carta, .opcion{
+        width: 20%;
+        height: 90%;
+    }
+}
+.footer{
+    width: 100%;
+    background-color: #484848;
+    color: var(--blanco);
+    font-family: 'Open Sans', sans-serif;
+    padding: 2rem;
+}
+
+ 
